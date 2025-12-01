@@ -1,0 +1,40 @@
+https://playerstage.sourceforge.net/doc/Player-2.1.0/player/index.html
+
+vfh driver -> https://playerstage.sourceforge.net/doc/Player-2.1.0/player/group__driver__vfh.html
+
+driver
+(
+  name "vfh"
+  requires ["position:1" "laser:0"]
+  provides ["position:0"]
+  safety_dist 0.10
+  distance_epsilon 0.3
+  angle_epsilon 5
+)
+
+
+nd driver  -> https://playerstage.sourceforge.net/doc/Player-2.1.0/player/group__driver__nd.html
+https://webdiis.unizar.es/~jminguez/TRAND.pdf
+
+driver
+(
+  name "nd"
+  provides ["position2d:1"]
+  requires ["output:::position2d:0" "input:::position2d:0" "laser:0" "sonar:0"]
+
+  max_speed [0.3 30.0]
+  min_speed [0.1 10.0]
+  goal_tol [0.3 15.0]
+  wait_on_stall 1
+
+  rotate_stuck_time 5.0
+  translate_stuck_time 5.0
+  translate_stuck_dist 0.15
+  translate_stuck_angle 10.0
+
+  avoid_dist 0.4
+  safety_dist 0.0
+
+  laser_buffer 1
+  sonar_buffer 1
+)
