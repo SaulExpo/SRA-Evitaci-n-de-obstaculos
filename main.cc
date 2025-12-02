@@ -25,7 +25,7 @@ void moveTo(PlayerCc::PlayerClient* client, PlayerCc::Position2dProxy* algorithm
     //std::cout << "Y: " << algorithmProxy->GetYPos() << std::endl;
     //std::cout << "Yaw: " << algorithmProxy->GetYaw() << std::endl;
 
-    algorithmProxy->GoTo(X - algorithmProxy->GetXPos(), Y - algorithmProxy->GetYPos(), Yaw - algorithmProxy->GetYaw());
+    algorithmProxy->GoTo(X, Y, Yaw);
    }
  
 }
