@@ -22,8 +22,7 @@ for ((i=1; i<=RUNS; i++)); do
   $CLIENT $X $Y $YAW localhost $PLAYER_PORT
 
   echo "Run $i finished"
-
-  # 3) Cerrar Player
+
   kill $PLAYER_PID
   wait $PLAYER_PID 2>/dev/null
 
